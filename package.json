@@ -1,0 +1,35 @@
+{
+  "name": "fancy-weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+		"pack": "webpack --watch",
+		"sass": "sass --watch sass/main.scss dist/bundle.css",
+		"lint": "eslint ./src",		
+		"lint:fix": "eslint ./src --fix"
+		
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frisko-sposad/fancy-weather.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frisko-sposad/fancy-weather/issues"
+  },
+  "homepage": "https://github.com/frisko-sposad/fancy-weather#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "babel-loader": "^8.1.0",
+    "sass": "^1.26.5",
+    "webpack": "^4.43.0"
+  },
+  "dependencies": {
+    "webpack-cli": "^3.3.11"
+  }
+}
