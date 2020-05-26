@@ -1,0 +1,34 @@
+.weather-max {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.weather__three-day {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.weather-max__temperature-today {
+	@include font(30rem, 37.3rem, bold, normal);
+}
+
+.weather-max__weather-data {
+	@include font(2.2rem, 1rem, bold, normal);
+}
+
+.weather-mini__day {
+	@include font(2.2rem, 1rem, bold, normal);
+}
+
+.weather-mini__temperature {
+	margin: 0;
+	@include font(8rem, 5rem, bold, normal);
+}
+
+
+
+
+
+

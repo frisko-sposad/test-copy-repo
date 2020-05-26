@@ -7,7 +7,67 @@
 	<title>Document</title>
 </head>
 <body>
-	Hello War
+	<header class="header" >
+		<div class="container">
+			<div class="menu-btn">
+				<button class="button menu-btn__chenge-bg">BG</button>
+				<button class="button menu-btn__chenge-lang">RU</button>
+				<button class="button menu-btn__chenge-degrees">C</button>
+			</div>
+			<div class="menu-search">
+				<input type="text" class="menu-search__input">
+				<button class="button menu-search__btn-search">SEARCH</button>
+			</div>
+		</div>
+	</header>
+
+	<main class="main" >
+		<div class="container">
+			<div class="main-info">
+				<div class="location">Moskow</div>
+				<div class="date">26 may 2020</div>
+				<div class="weather">
+					<div class="weather-max">Today
+						<div class="weather-max__temperature-today">
+							15
+						</div>
+						<div class="weather-max__weather-data">
+							<p>Overcast</p>
+							<p>Feels Like: 13°C</p>
+							<p>Wind: 1 m/s</p>
+							<p>Humidity: 52%</p></div>
+					</div>
+					<div class="weather__three-day">
+						<div class="weather-mini">
+							<p class="weather-mini__day">WEDNESDAY</p>
+							<p class="weather-mini__temperature">17°</p>
+							<img class="weather-mini__icon" alt="cloudy" src="img/cloudy.png">
+						</div>
+						<div class="weather-mini">
+							<p class="weather-mini__day">THURSDAY</p>
+							<p class="weather-mini__temperature">15°</p>
+							<img class="weather-mini__icon" alt="cloudy" src="img/cloudy.png">
+						</div>
+						<div class="weather-mini">
+							<p class="weather-mini__day">FRIDAY</p>
+							<p class="weather-mini__temperature">24°</p>
+							<img class="weather-mini__icon" alt="cloudy" src="img/cloudy.png">
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="main-info">
+				<div class="map">
+					Map
+				</div>
+				<div class="coordinate">
+					982374892374239
+				</div>
+			</div>
+			
+		</div>
+	</main>
 
 	<script src="./dist/bundle.js" async></script>
 </body>

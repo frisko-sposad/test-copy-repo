@@ -1,0 +1,14 @@
+.container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	max-width: $content-width;
+	margin: 0 auto;	
+	padding: 0 90px;
+	
+	@include media-mobile {
+		padding: 0 20px;
+	} 
+	
+}
+

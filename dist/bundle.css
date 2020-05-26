@@ -1,5 +1,100 @@
+html {
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
 body {
-  color: blue;
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: black;
+}
+
+.button {
+  border: 2px solid white;
+  background: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  height: 40px;
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 90px;
+}
+@media (max-width: 350px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+.header {
+  padding: 20px;
+}
+
+.weather-max {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.weather__three-day {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.weather-max__temperature-today {
+  font-size: 30rem;
+  line-height: 37.3rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.weather-max__weather-data {
+  font-size: 2.2rem;
+  line-height: 1rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.weather-mini__day {
+  font-size: 2.2rem;
+  line-height: 1rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.weather-mini__temperature {
+  margin: 0;
+  font-size: 8rem;
+  line-height: 5rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.location {
+  font-size: 4.4rem;
+  line-height: 5.4rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.date {
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  font-weight: 600;
+  font-style: normal;
 }
 
 /*# sourceMappingURL=bundle.css.map */
