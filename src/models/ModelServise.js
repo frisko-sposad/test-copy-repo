@@ -1,10 +1,16 @@
 import BgApi from './BgApi';
-import key from './keys'
+import keys from './keys';
+import LocationAPI from './LocationAPI';
 
-const bgApi = new BgApi(key.bg);
+const bgApi = new BgApi(keys.bg);
+const locationAPI = new LocationAPI(keys.bg);
 
 export default class {
-	async getBackgroungImage() {
-		return await bgApi.getImg();
-	}
+  static async getBackgroungImage() {
+    return bgApi.getImg();
+  }
+
+  static async getLocation() {
+    return locationAPI.getLocation();
+  }
 }

@@ -6,7 +6,7 @@ html {
 
 body {
 	@include font(10px);
-background-color: $color-background;
+	background-color: $color-background;
 }
 
 .button {
@@ -16,4 +16,22 @@ background-color: $color-background;
 	padding: 5px 10px;
 	height: 40px;
 	color: $color-text-main;
+	cursor: pointer;
+	margin-right: 5px;
+}
+
+.menu-search__input {
+	@include font(1.4rem, 1.4rem, normal, normal);
+	border: 2px solid $color-text-main;
+	background: none;
+	border-radius: 5px;	
+	padding: 5px 10px;
+	height: 26px;
+	color: $color-text-main;	
+	margin-right: 5px;
+}
+
+.button:hover {
+	border: 2px solid $color-button-hover;	
+	color: $color-button-hover;
 }
