@@ -1,0 +1,6 @@
+.error-message {
+    color: red;
+    @include font(1.6rem);
+    height: 45px;
+    text-align: center;
+}

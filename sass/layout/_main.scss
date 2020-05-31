@@ -1,0 +1,17 @@
+.main {
+
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;    
+    @include media-laptop {
+
+    }
+    @include media-tablet {
+        grid-template-columns: 2fr 1fr; 
+    }
+    @include media-mobile {
+        display: block;
+    }
+}

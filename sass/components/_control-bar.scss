@@ -1,0 +1,29 @@
+.control-bar {
+    display: flex;
+    justify-content: space-between; 
+    @include media-laptop {
+
+    }
+    @include media-tablet {
+        display: block;
+    }
+    @include media-mobile {
+    }
+}
+
+.control-bar__button-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.control-bar__change-bg {
+    width: 88px;
+}
+
+.control-bar__change-lang {
+    width: 50px;
+}
+
+.control-bar__change-scale {
+    width: 44px;
+}

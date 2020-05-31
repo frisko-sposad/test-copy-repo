@@ -1,12 +1,31 @@
 import Controller from './controllers/Controller';
 
-const buttonChangeBackground = document.querySelector('.menu-btn__chenge-bg');
+Controller.changeBackground();
+Controller.showWeather();
+Controller.runTime();
+
+const buttonChangeBackground = document.querySelector('.control-bar__change-bg');
+const btnSearch = document.querySelector('.search-bar__button');
+const inputSearch = document.querySelector('.search-bar__input');
+const btnLang = document.querySelector('.control-bar__change-lang');
+const changeScale = document.querySelector('.control-bar__change-scale');
+
 buttonChangeBackground.addEventListener('click', () => {
-  Controller.chageBackground();
+  Controller.changeBackground();
 });
 
-Controller.chageBackground();
+btnSearch.addEventListener('click', () => {
+  Controller.showWeather(inputSearch.value);
+});
 
-Controller.getWeather();
+document.addEventListener('keydown', (event) => {
+  if (event.keyCode === 13) { Controller.showWeather(inputSearch.value); }
+});
 
-Controller.runTime();
+btnLang.addEventListener('click', () => {
+  Controller.changeLanguage();
+});
+
+changeScale.addEventListener('click', () => {
+  Controller.changeScale();
+});

@@ -9,8 +9,8 @@ export default class {
       const json = await res.json();
       return json.loc.split(',').map((v) => parseFloat(v));
     } catch (e) {
-      console.log(e);
-      return new Location('156.3500', '138.1167');
+      console.log(`Ошибка получения информации об IP: ${e}`);
+      return [55.75, 37.62];
     }
   }
 }

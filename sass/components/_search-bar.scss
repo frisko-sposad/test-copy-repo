@@ -1,0 +1,25 @@
+.search-bar {
+    float: right;
+}
+
+.search-bar__input {
+    box-sizing: border-box;
+    width: 300px;
+    border-radius: 5px;
+    background: none;
+    color: white;
+    padding: 0 10px;
+    @include font(2.2rem, 3.4rem);
+    @include media-laptop {
+        width: 250px;
+    };
+    @include media-tablet {
+        width: 100%;
+    }
+    @include media-mobile {
+    }
+}
+
+.search-bar__button {
+    width: 120px;
+}

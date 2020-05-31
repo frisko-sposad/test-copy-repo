@@ -1,5 +1,6 @@
 export default class {
-  constructor(temperature, icon, description, apparentTemperature, windSpeed, humidity) {
+  constructor(dayOfWeek, temperature, icon, description, apparentTemperature, windSpeed, humidity) {
+    this.dayOfWeek = dayOfWeek;
     this.temperature = temperature;
     this.icon = icon;
     this.description = description;

@@ -1,0 +1,15 @@
+.geolocation {
+  margin: 0 auto;
+}
+
+.geolocation__map {
+    width: 375px;
+    height: 375px;
+    background-color: brown;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.geolocation__coordinates {
+    @include font(2rem, 3rem, 600, normal);
+}

@@ -1,46 +1,42 @@
-.weather-max {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+.weather {
+
 }
 
-.weather__three-day {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+.weather__forecast {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
 }
 
-.weather-max__icon {
-  width: 200px;
+.weather__grid {
 }
 
-.weather-mini__icon {
-  width: 100px;
+.weather__max {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
 }
 
-.weather-mini-container{
-  display: flex;
+.weather__num {
+    @include font(30.6rem, 37.3rem, bold, normal);
+    &_min {
+        @include font(8.0rem, 9.8rem, 600, normal);
+        display: inline-block;
+    }
 }
 
-.weather-max__temperature-today {
-	@include font(16rem, 16rem, bold, normal);
+.weather__symbol {    
+    width: 170px;
+    &_min {   
+        width: 70px;
+        display: inline-block;
+    }
 }
 
-.weather-max__weather-data {
-	@include font(2.2rem, 1rem, bold, normal);
+.weather__text {
+    @include font(2.2rem, 2.7rem, bold, normal);
 }
 
-.weather-mini__day {
-	@include font(2.2rem, 1rem, bold, normal);
+.weather__day {
+    @include font(2.2rem, 2.7rem, bold, normal);
 }
-
-.weather-mini__temperature {
-	margin: 0;
-	@include font(8rem, 8rem, bold, normal);
-}
-
-
-
-
-
-

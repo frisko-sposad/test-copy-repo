@@ -1,97 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="dist/bundle.css">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/bundle.css">
+    <title>Document</title>
 </head>
-<body id="body" class="body">
-	<header class="header" >
-		<div class="container">
-			<div class="menu-btn">
-				<button class="button menu-btn__chenge-bg">BG</button>
-				<button class="button menu-btn__chenge-lang">RU</button>
-				<button class="button menu-btn__chenge-degrees">C</button>
-			</div>
-			<div class="menu-search">
-				<input type="text" class="menu-search__input">
-				<button class="button menu-search__btn-search">SEARCH</button>
-			</div>
-		</div>
-	</header>
-
-	<main class="main" >
-		<div class="container">
-			<div class="main-info">
-				<div id="location" class="location"></div>
-				<div id="date" class="date">26 may 2020</div>
-				<div class="weather">
-					<div class="weather-max">
-						<div class="weather-max__temperature-today">							
-            </div> 
-              <div class="">
-                <img class="weather-max__icon" alt="cloudy" src="img/r02d.png">             
-                <div class="weather-max__weather-data">              
-                  <p>Overcast</p>
-                  <p>Feels Like: 13°C</p>
-                  <p>Wind: 1 m/s</p>
-                  <p>Humidity: 52%</p>
+<body class="body">
+    <header class="header">
+        <div class="wrapper">
+            <div class="control-bar">
+                <div class="control-bar__button-bar">
+                    <button class="button control-bar__change-bg">BG</button>
+                    <button class="button control-bar__change-lang">EN</button>
+                    <button class="button control-bar__change-scale">°C</button>
                 </div>
-            </div> 
-            
-					</div>
-					<div class="weather__three-day">
-						<div class="weather-mini">
-							<p class="weather-mini__day">WEDNESDAY</p>
-							<div class="weather-mini-container">
-                <p class="weather-mini__temperature">15°</p>
-                <img class="weather-mini__icon" alt="cloudy" src="img/r02d.png">
-              </div>
-						</div>
-						<div class="weather-mini">
-              <p class="weather-mini__day">THURSDAY</p>
-              <div class="weather-mini-container">
-                <p class="weather-mini__temperature">15°</p>
-                <img class="weather-mini__icon" alt="cloudy" src="img/r02d.png">
-              </div>
-							
-						</div>
-						<div class="weather-mini">
-							<p class="weather-mini__day">FRIDAY</p>
-							<div class="weather-mini-container">
-                <p class="weather-mini__temperature">15°</p>
-                <img class="weather-mini__icon" alt="cloudy" src="img/r02d.png">
-              </div>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-			<div class="main-info">
-				<div class="map">
-					
-				
-				<div id="map" style="width: 300px; height: 300px"></div>
-				</div>
-				<div id="coordinate" class="coordinate">					
-				</div>
-			</div>
-			
-		</div>
-	</main>
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
-	</script>
-	<script type="text/javascript">
-			ymaps.ready(init);
-			function init(){
-					var myMap = new ymaps.Map("map", {
-							center: [55.76, 37.64],
-							zoom: 7
-					});
-			}
-	</script>
-	<script src="./dist/bundle.js" async></script>
+                <div class="control-bar__search-bar search-bar">
+                    <input type="text" class="input search-bar__input">
+                    <button class="button search-bar__button">SEARCH</button>
+                </div>
+            </div>
+        </div>
+    </header>    
+    <main class="main">        
+        <div class="wrapper"> 
+            <div class="error-message"></div>
+            <div class="main-grid">
+                <div class="weather">                    
+                    <div class="weather__current">
+                        <div class="location">MOSCOW, RUSSIA</div>
+                        <div class="date-time">Tue 26 May   22:09</div>
+                        <div class="weather__max">
+                            <div class="weather__num">
+                                15°
+                            </div>
+                            <div class="weather__info">
+                                <img class="weather__symbol" alt="Unknown" src="./assets/images/weather_icons/c04d.png">
+                                <div class="weather__text">
+                                    OVERCAST<br>
+                                    FEELS LIKE: 15°<br>
+                                    WIND: 2 M/S<br>
+                                    HUMIDITY: 57%<br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weather__forecast">
+                        <div class="weather__min">
+                            <div class="weather__day">
+                                Tommorow                                                   
+                            </div> 
+                            <div class="weather__grid">
+                                <div class="weather__num_min">
+                                    15°                                                   
+                                </div>
+                                <img class="weather__symbol_min" alt="Unknown" src="./assets/images/weather_icons/c04d.png">                                                
+                            </div>                                                    
+                        </div> 
+                        <div class="weather__min">
+                            <div class="weather__day">
+                                Tommorow                                                   
+                            </div> 
+                            <div class="weather__grid">
+                                <div class="weather__num_min">
+                                    15°                                                   
+                                </div>
+                                <img class="weather__symbol_min" alt="Unknown" src="./assets/images/weather_icons/c04d.png">                                                
+                            </div>                                                 
+                        </div>
+                        <div class="weather__min">
+                            <div class="weather__day">
+                                Tommorow                                                   
+                            </div> 
+                            <div class="weather__grid">
+                                <div class="weather__num_min">
+                                    15°                                                   
+                                </div>
+                                <img class="weather__symbol_min" alt="Unknown" src="./assets/images/weather_icons/c04d.png">                                               
+                            </div>                                                   
+                        </div>                  
+                    </div>
+                </div>                
+                <div class="geolocation">
+                    <div id="map" class="geolocation__map" style="width: 300px; height: 300px"></div>
+                    <div class="geolocation__coordinates">
+                        Latitude: 55°45'
+                        Longitude: 37°37'
+                    </div>
+                </div> 
+            </div>            
+        </div>
+    </main>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=1860caf2-8cca-4692-b3e1-3409875b22dc&lang=ru_RU" type="text/javascript"></script> </script>
+    <script src="./dist/bundle.js" async></script>    
 </body>
 </html>
-

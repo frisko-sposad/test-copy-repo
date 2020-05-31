@@ -1,23 +1,45 @@
 import ViewService from '../views/ViewService';
-import ModelServise from '../models/ModelServise';
+import ModelService from '../models/ModelService';
 
-export default class {
-  static async chageBackground() {
-    const imgUrl = await ModelServise.getBackgroungImage();
-    ViewService.setBackground(imgUrl);
+const defaultImageUrl = './assets/images/bg-default.jpg';
+
+export default class Controller {
+  static async changeBackground() {
+    const response = await ModelService.getBackgroundImageUrl();
+    if (response.success) {
+      ViewService.setBackground(response.result);
+    } else {
+      ViewService.showError(response.error);
+      ViewService.setBackground(defaultImageUrl);
+    }
   }
 
   static runTime() {
     function clock() {
-      const date = new Date();
-      ViewService.setDateTime(date);
+      const dateTime = new Date();
+      ViewService.setDateTime(dateTime, ModelService.getConfig());
     }
     setInterval(clock, 1000);
     clock();
   }
 
-  static async getWeather(city) {
-    const weather = await ModelServise.getWeather(city);
-    ViewService.setWeather(weather);
+  static async showWeather(city) {
+    ViewService.showError('');
+    const response = await ModelService.getWeather(city);
+    if (response.success) {
+      ViewService.setWeather(ModelService.getConfig());
+    } else {
+      ViewService.showError(response.error);
+    }
+  }
+
+  static changeLanguage() {
+    ModelService.changeLanguage();
+    this.showWeather();
+  }
+
+  static changeScale() {
+    ModelService.changeScale();
+    this.showWeather();
   }
 }
