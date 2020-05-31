@@ -7,4 +7,6 @@ buttonChangeBackground.addEventListener('click', () => {
 
 Controller.chageBackground();
 
-Controller.getLocation();
+Controller.getWeather();
+
+Controller.runTime();

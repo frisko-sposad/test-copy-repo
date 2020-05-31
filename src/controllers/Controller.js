@@ -7,8 +7,17 @@ export default class {
     ViewService.setBackground(imgUrl);
   }
 
-  static async getLocation() {
-    const location = await ModelServise.getLocation();
-    ViewService.setlocation(location);
+  static runTime() {
+    function clock() {
+      const date = new Date();
+      ViewService.setDateTime(date);
+    }
+    setInterval(clock, 1000);
+    clock();
+  }
+
+  static async getWeather(city) {
+    const weather = await ModelServise.getWeather(city);
+    ViewService.setWeather(weather);
   }
 }

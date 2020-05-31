@@ -24,34 +24,45 @@
 	<main class="main" >
 		<div class="container">
 			<div class="main-info">
-				<div id="location" class="location">Moskow</div>
-				<div class="date">26 may 2020</div>
+				<div id="location" class="location"></div>
+				<div id="date" class="date">26 may 2020</div>
 				<div class="weather">
 					<div class="weather-max">
-						<div class="weather-max__temperature-today">
-							15
-						</div>
-						<div class="weather-max__weather-data">
-							<p>Overcast</p>
-							<p>Feels Like: 13°C</p>
-							<p>Wind: 1 m/s</p>
-							<p>Humidity: 52%</p></div>
+						<div class="weather-max__temperature-today">							
+            </div> 
+              <div class="">
+                <img class="weather-max__icon" alt="cloudy" src="img/r02d.png">             
+                <div class="weather-max__weather-data">              
+                  <p>Overcast</p>
+                  <p>Feels Like: 13°C</p>
+                  <p>Wind: 1 m/s</p>
+                  <p>Humidity: 52%</p>
+                </div>
+            </div> 
+            
 					</div>
 					<div class="weather__three-day">
 						<div class="weather-mini">
 							<p class="weather-mini__day">WEDNESDAY</p>
-							<p class="weather-mini__temperature">17°</p>
-							<img class="weather-mini__icon" alt="cloudy" src="img/cloudy.png">
+							<div class="weather-mini-container">
+                <p class="weather-mini__temperature">15°</p>
+                <img class="weather-mini__icon" alt="cloudy" src="img/r02d.png">
+              </div>
 						</div>
 						<div class="weather-mini">
-							<p class="weather-mini__day">THURSDAY</p>
-							<p class="weather-mini__temperature">15°</p>
-							<img class="weather-mini__icon" alt="cloudy" src="img/cloudy.png">
+              <p class="weather-mini__day">THURSDAY</p>
+              <div class="weather-mini-container">
+                <p class="weather-mini__temperature">15°</p>
+                <img class="weather-mini__icon" alt="cloudy" src="img/r02d.png">
+              </div>
+							
 						</div>
 						<div class="weather-mini">
 							<p class="weather-mini__day">FRIDAY</p>
-							<p class="weather-mini__temperature">24°</p>
-							<img class="weather-mini__icon" alt="cloudy" src="img/cloudy.png">
+							<div class="weather-mini-container">
+                <p class="weather-mini__temperature">15°</p>
+                <img class="weather-mini__icon" alt="cloudy" src="img/r02d.png">
+              </div>
 						</div>
 					</div>
 				</div>
@@ -59,16 +70,27 @@
 			</div>
 			<div class="main-info">
 				<div class="map">
-					Map
+					
+				
+				<div id="map" style="width: 300px; height: 300px"></div>
 				</div>
-				<div id="coordinate" class="coordinate">
-					982374892374239
+				<div id="coordinate" class="coordinate">					
 				</div>
 			</div>
 			
 		</div>
 	</main>
-
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+	</script>
+	<script type="text/javascript">
+			ymaps.ready(init);
+			function init(){
+					var myMap = new ymaps.Map("map", {
+							center: [55.76, 37.64],
+							zoom: 7
+					});
+			}
+	</script>
 	<script src="./dist/bundle.js" async></script>
 </body>
 </html>

@@ -13,6 +13,8 @@ body {
   font-weight: normal;
   font-style: normal;
   background-color: black;
+  background-size: cover;
+  height: 100vh;
 }
 
 .button {
@@ -75,9 +77,21 @@ body {
   flex-wrap: wrap;
 }
 
+.weather-max__icon {
+  width: 200px;
+}
+
+.weather-mini__icon {
+  width: 100px;
+}
+
+.weather-mini-container {
+  display: flex;
+}
+
 .weather-max__temperature-today {
-  font-size: 30rem;
-  line-height: 37.3rem;
+  font-size: 16rem;
+  line-height: 16rem;
   font-weight: bold;
   font-style: normal;
 }
@@ -99,14 +113,14 @@ body {
 .weather-mini__temperature {
   margin: 0;
   font-size: 8rem;
-  line-height: 5rem;
+  line-height: 8rem;
   font-weight: bold;
   font-style: normal;
 }
 
 .location {
-  font-size: 4.4rem;
-  line-height: 5.4rem;
+  font-size: 4rem;
+  line-height: 4rem;
   font-weight: bold;
   font-style: normal;
 }

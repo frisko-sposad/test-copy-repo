@@ -10,8 +10,20 @@
 	flex-wrap: wrap;
 }
 
+.weather-max__icon {
+  width: 200px;
+}
+
+.weather-mini__icon {
+  width: 100px;
+}
+
+.weather-mini-container{
+  display: flex;
+}
+
 .weather-max__temperature-today {
-	@include font(30rem, 37.3rem, bold, normal);
+	@include font(16rem, 16rem, bold, normal);
 }
 
 .weather-max__weather-data {
@@ -24,7 +36,7 @@
 
 .weather-mini__temperature {
 	margin: 0;
-	@include font(8rem, 5rem, bold, normal);
+	@include font(8rem, 8rem, bold, normal);
 }
 
 

@@ -1,10 +1,10 @@
 export default class {
-  constructor(city, region, country, Latitude, Longitude, timezone) {
+  constructor(city, region, country, latitude, longitude, timeZone) {
     this.city = city,
     this.region = region,
     this.country = country,
-		this.Latitude = Latitude,
-		this.Longitude = Longitude,		
-    this.timezone = timezone,
-	}
+    this.latitude = latitude,
+    this.longitude = longitude,
+    this.timeZone = timeZone;
+  }
 }
