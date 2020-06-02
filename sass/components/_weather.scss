@@ -3,22 +3,23 @@
 }
 
 .weather__forecast {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.weather__grid {
+.weather__current {
+ 
 }
 
 .weather__max {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .weather__num {
-    @include font(30.6rem, 37.3rem, bold, normal);
+    @include font(20rem, 20rem, bold, normal);
     &_min {
         @include font(8.0rem, 9.8rem, 600, normal);
         display: inline-block;

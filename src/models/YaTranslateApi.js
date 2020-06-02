@@ -10,7 +10,7 @@ export default class {
   async getTranslate(text, from, to) {
     const url = `${yaTranslateApiUrl}/translate?key=${this.key}&text=${text}&lang=${from}-${to}`;
 
-    const res = await fetch(url);
+    const res = await fetch(url);    
     if (!res.ok) { return new Response(false, res.error); }
 
     const json = await res.json();

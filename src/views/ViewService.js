@@ -52,7 +52,7 @@ export default class {
     changeScale.innerHTML = config.scaleText.btnScale[config.scaleIndex];
     searchButton.innerHTML = config.objectsText.btnSearch[config.languageIndex];
 
-    locationElement.innerText = `${cityInfo.city}, ${cityInfo.countryLang}`;
+    locationElement.innerText = `${cityInfo.cityLang}, ${cityInfo.countryLang}`;
     mapCoordinates.innerHTML = `${config.objectsText.Latitude[config.languageIndex]}: `;
     mapCoordinates.innerHTML += `${this.parseGradesAndMinutes(cityInfo.latitude)}`;
     mapCoordinates.innerHTML += `<br>${config.objectsText.Longitude[config.languageIndex]}: `;

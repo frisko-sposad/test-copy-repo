@@ -8,5 +8,6 @@ body {
   @include font(2.0rem, 2.4rem);
   background-color: $color-background;
   background-size: cover; 
+  height: 100vh;
 }
 

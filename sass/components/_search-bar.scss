@@ -1,5 +1,5 @@
 .search-bar {
-    float: right;
+    
 }
 
 .search-bar__input {
@@ -14,7 +14,7 @@
         width: 250px;
     };
     @include media-tablet {
-        width: 100%;
+        width: 250px;
     }
     @include media-mobile {
     }

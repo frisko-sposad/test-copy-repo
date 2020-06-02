@@ -353,6 +353,7 @@ body {
   font-style: normal;
   background-color: #000000;
   background-size: cover;
+  height: 100vh;
 }
 
 .button {
@@ -367,9 +368,9 @@ body {
 }
 
 .wrapper {
-  max-width: 1440px;
+  max-width: 1024px;
   margin: auto;
-  padding: 0 90px;
+  padding: 0 10%;
 }
 @media (max-width: 350px) {
   .wrapper {
@@ -378,22 +379,13 @@ body {
 }
 
 .header {
-  padding: 40px 0 60px;
+  padding: 30px 0 30px;
 }
 
 .main-grid {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-}
-@media (max-width: 768px) {
-  .main-grid {
-    grid-template-columns: 2fr 1fr;
-  }
-}
-@media (max-width: 350px) {
-  .main-grid {
-    display: block;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .control-bar {
@@ -407,6 +399,11 @@ body {
 }
 .control-bar__button-bar {
   display: flex;
+  padding: 10px;
+}
+
+.control-bar__search-bar {
+  padding: 10px;
   justify-content: space-between;
 }
 
@@ -422,10 +419,6 @@ body {
   width: 44px;
 }
 
-.search-bar {
-  float: right;
-}
-
 .search-bar__input {
   box-sizing: border-box;
   width: 300px;
@@ -438,14 +431,14 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1024px) {
   .search-bar__input {
     width: 250px;
   }
 }
 @media (max-width: 768px) {
   .search-bar__input {
-    width: 100%;
+    width: 250px;
   }
 }
 .search-bar__button {
@@ -453,20 +446,20 @@ body {
 }
 
 .weather__forecast {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .weather__max {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .weather__num {
-  font-size: 30.6rem;
-  line-height: 37.3rem;
+  font-size: 20rem;
+  line-height: 20rem;
   font-weight: bold;
   font-style: normal;
 }
@@ -509,8 +502,8 @@ body {
 }
 
 .date-time {
-  font-size: 2.4rem;
-  line-height: 2.9rem;
+  font-size: 2rem;
+  line-height: 2rem;
   font-weight: 600;
   font-style: normal;
 }
